@@ -63,7 +63,7 @@ var button_submit = document.getElementById('submit-name');
                         var list= '';
                         for(var i=0;i<names.length;i++)
                         list+= '<li>' + names + '</li>';
-                        var ui = document.getElementById('anme-list');
+                        var ui = document.getElementById('name-list');
                         ui.innerHTML = list;
                     }
                 }
