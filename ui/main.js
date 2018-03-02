@@ -11,12 +11,21 @@ img.onclick = function ()
   var interval = setInterval(moveRight,50);  
 };
 
-//onButtonClick
+//onButtonClickCountIncrease
 
-var nxtCount = 0;
-var Counter = document.getElementById('counter');
-counter.onclick = function(){
-    var span = document.getElementById('count');
-    nxtCount=nxtCount+1;
-    span.innerHTML = nxtCount;
+var request = XMLHttpRequest();
+
+request.onreadystatechange = function(){
+    if(request.readystate === XMLHttpRequest.DONE)
+     {
+         if(request.status===200)
+            {
+                var counter = request.responseText;
+                var span = document.getElementById('count');
+                span.innerHTML = counter.toString();
+            }
+     }
 };
+
+request.open('GET','http://www.pinakbagchi115.imad.hasura-app.io',true);
+request.send(null);
