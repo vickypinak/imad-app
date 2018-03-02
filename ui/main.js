@@ -27,5 +27,5 @@ request.onreadystatechange = function(){
      }
 };
 
-request.open('GET','http://www.pinakbagchi115.imad.hasura-app.io/counter',true);
+request.open('GET','http://pinakbagchi115.imad.hasura-app.io/counter',true);
 request.send(null);
