@@ -22,4 +22,6 @@ body {
     height: 200px;
 }
 
-
+.footer {
+    text-align:right;
+}
