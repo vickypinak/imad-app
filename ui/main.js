@@ -31,6 +31,6 @@ var button = document.getElementById('counter');
             }
         };
         
-        request.open('GET','http://pinakbagchi115.imad.hasura-app.io/counte',true);
+        request.open('GET','http://pinakbagchi115.imad.hasura-app.io/counter',true);
         request.send(null);
 };
