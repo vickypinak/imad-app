@@ -12,3 +12,11 @@ img.onclick = function ()
 };
 
 //onButtonClick
+
+var nxtCount = 0;
+var Counter = document.getElementById('counter');
+counter.onclick = function(){
+    var span = document.getElementById('count');
+    nxtCount=nxtCount+1;
+    span.innerHTML = nxtCount;
+};
