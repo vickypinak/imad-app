@@ -5,6 +5,16 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+
+var names = [];
+app.get('/submit-name',function(req,res){           //takes submit-name?name=xxxx
+    
+    var name = req.query.name;
+    names.push(name);
+    res.send(JSON.stringify(names));
+});
+
 var contents = {
   'article-one': {
         title: 'Article-One | Pinak Bagchi' ,
@@ -95,15 +105,6 @@ app.get('/ui/madi.png', function (req, res) {
 app.get('/ui/main.js',function(req,res){
     res.sendFile(path.join(__dirname,'ui','main.js'));
 });
-
-var names = [];
-app.get('/submit-name',function(req,res){           //takes submit-name?name=xxxx
-    
-    var name = req.query.name;
-    names.push(name);
-    res.send(JSON.stringify(names));
-});
-
 
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
