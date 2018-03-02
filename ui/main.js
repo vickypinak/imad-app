@@ -1,5 +1,4 @@
 console.log('Loaded!');
-alert('PageLoaded!');
 
 var img = document.getElementById('img_madi');
 var marginLeft = 0;
