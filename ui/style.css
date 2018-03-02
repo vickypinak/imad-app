@@ -25,3 +25,7 @@ body {
 .footer {
     text-align:right;
 }
+
+.search-box {
+    padding-left:50px;
+}
