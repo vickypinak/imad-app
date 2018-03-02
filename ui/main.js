@@ -19,7 +19,7 @@ var button = document.getElementById('counter');
         
         var request = new XMLHttpRequest();
         
-        request.onreadystatechange = function(){
+        request.onreadystatechange = function() {
         if(request.readyState === XMLHttpRequest.DONE)
             {
              if(request.status===200)
@@ -38,7 +38,7 @@ var button = document.getElementById('counter');
 // Searchbox
 var btn_submitName = document.getElementById('button-name');
 
-btn_submitName.onclick = function(){
+btn_submitName.onclick = function() {
     var names = ['name1','name2','name3','name4','name5'];
     var list = '';
     for(var i = 0;i<names.length;i++){
