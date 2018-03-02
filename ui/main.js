@@ -61,8 +61,9 @@ var button_submit = document.getElementById('submit-name');
                         var names = responseText;
                         names = JSON.parse(names);
                         var list= '';
-                        for(var i=0;i<names.length;i++)
+                        for(var i=0;i<names.length;i++){
                         list+= '<li>' + names + '</li>';
+                        }
                         var ui = document.getElementById('name-list');
                         ui.innerHTML = list;
                     }
