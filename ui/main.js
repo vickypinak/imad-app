@@ -36,7 +36,7 @@ var button = document.getElementById('counter');
 };
 
 // Searchbox
-var btn_submitName = document.getElementById('button-name');
+var btn_submitName = document.getElementById('submit-name');
 
 btn_submitName.onclick = function() {
     var names = ['name1','name2','name3','name4','name5'];
