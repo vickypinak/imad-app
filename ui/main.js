@@ -19,7 +19,7 @@ var button = document.getElementById('counter');
         
         var request = new XMLHttpRequest();
         
-        request.onReadyStateChange = function(){
+        request.onreadystate = function(){
         if(request.readyState === XMLHttpRequest.DONE)
             {
              if(request.status===200)
