@@ -52,7 +52,7 @@ var button = document.getElementById('counter');
 var button_submit = document.getElementById('submit-name');
     button_submit.onclick = function() {
         
-        var request = XMLHttpRequest();
+        var request = new XMLHttpRequest();
         request.onsteadystatechange = function(){
             
             if(request.steadystate === XMLHttpRequest.DONE)
