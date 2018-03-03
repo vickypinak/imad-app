@@ -21,7 +21,7 @@ app.get('/db-test',function(req,res){
 
     pool.query('SELECT * FROM test',function (err,request){
         if(err){
-            res.status(500).send('NOT send');
+            res.status(502).send('NOT send');
         } 
         else {
             res.send(JSON.stringify(result));
