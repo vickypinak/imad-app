@@ -1,11 +1,31 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var Pool = require('pg').Pool;
 
 var app = express();
 app.use(morgan('combined'));
 
+var config = {
+  user : 'pinakbagchi115',
+  database : 'pinakbagchi115',
+  port : '5432',
+  password : process.env.DB_PASSWORD 
+};  
 
+var pool = new Pool(config);
+
+app.get('/db_test',function(req,res){
+
+    pool.query('SELECT * FROM test',function (err,request){
+        if(err){
+            res.status(500).send(err.toString());
+        } 
+        else {
+            res.send(JSON.stringify(result));
+        }
+    });    
+});
 
 var names = [];
 app.get('/submit-name',function(req,res){           //takes submit-name?name=xxxx
