@@ -19,7 +19,7 @@ app.get('/db_test',function(req,res){
 
     pool.query('SELECT * FROM test',function (err,request){
         if(err){
-            res.status(450).send(err.toString());
+            res.status(500).send(err.toString());
         } 
         else {
             res.send(JSON.stringify(result));
