@@ -107,7 +107,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-
+                                                            // Displaying articles from js - serverside
 app.get('/:articleName', function(req,res){
     
     var articleNames = req.params.articleName;
