@@ -62,7 +62,7 @@ submit_search.onclick = function(){
                 
             }
     };
-    request.open('GET','http//pinakbagchi115.imad.hasura-app.io/submit-name?name='+ enteredName, true);
+    request.open('GET','http://pinakbagchi115.imad.hasura-app.io/submit-name?name='+ enteredName, true);
     request.send(null);
 };
 
