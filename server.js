@@ -51,7 +51,7 @@ var contents = {
         title: 'Article-two | Pinak Bagchi' ,
         date: 'March 2, 2018',
         paragraph:`<pr>
-               <h2> This is article three</h2>
+               <h2> This is article two</h2>
                
             </pr>`
   }  ,
