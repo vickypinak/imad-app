@@ -17,26 +17,27 @@ var button = document.getElementById('counter');
 
     button.onclick = function(){
         
-        var request = new XMLHttpRequest();
+        var request1 = new XMLHttpRequest();
         
-        request.onreadystatechange = function() {
-        if(request.readyState === XMLHttpRequest.DONE)
+        request1.onreadystatechange = function() {
+        if(request1.readyState === XMLHttpRequest.DONE)
             {
-             if(request.status===200)
+             if(request1.status===200)
                 {
-                    var counter = request.responseText;
+                    var counter = request1.responseText;
                     var span = document.getElementById('count');
                     span.innerHTML = counter.toString();
                 }
             }
         };
         
-        request.open('GET','http://pinakbagchi115.imad.hasura-app.io/counter',true);
-        request.send(null);
+        request1.open('GET','http://pinakbagchi115.imad.hasura-app.io/counter',true);
+        request1.send(null);
 };
 
 // Searchbox
-    var nameInput = document.getElementById('name-box');
+
+ /* var nameInput = document.getElementById('name-box');
     var name_set = nameInput.value;
     var btn_submitName = document.getElementById('submit-name');
     btn_submitName.onclick = function() {
@@ -48,6 +49,7 @@ var button = document.getElementById('counter');
         var ui = document.getElementById('name-list');
         ui.innerHTML = list;
     };  
+*/
 
 var button_submit = document.getElementById('submit-name');
     button_submit.onclick = function() {
@@ -58,7 +60,7 @@ var button_submit = document.getElementById('submit-name');
             if(request.steadystate === XMLHttpRequest.DONE)
                 {
                     if(request.status === 200) {
-                        var names = responseText;
+                        var names = request.responseText;
                         names = JSON.parse(names);
                         var list= '';
                         for(var i=0;i<names.length;i++){
