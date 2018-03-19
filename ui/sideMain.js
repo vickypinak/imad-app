@@ -6,6 +6,7 @@ button.onClick = function() {
  {
      list+= '<li' + names[i] + '</li>';
      console.log(JSON.stringfy(list));
+     console.log('1');
  }
  var returnList = document.getElementById('list_id');                     //Returns the list to the ui in search.html
  returnList.innerHTML = list;
