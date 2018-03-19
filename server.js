@@ -29,11 +29,6 @@ app.get('/db-test',function(req,res){
     });    
 });
 
-                                                    //NewSearchTab
-app.get('/newSearch',function(req,res){
-    res.sendFile(path.join(__dirname, '/ui','search.html'));
-});
-
 var names = [];
 app.get('/submit-name',function(req,res){           //takes submit-name?name=xxxx
     
@@ -41,6 +36,12 @@ app.get('/submit-name',function(req,res){           //takes submit-name?name=xxx
     names.push(name);
     res.send(JSON.stringify(names));
 });
+                                                    //NewSearchTab
+app.get('/newSearch',function(req,res){
+    res.sendFile(path.join(__dirname, '/ui','search.html'));
+});
+
+
 
 var contents = {
   'article-one': {
