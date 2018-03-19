@@ -96,7 +96,7 @@ function createTemplate (data){
 
 return htmlTemplate;
 }
-
+                                                            // counter work done here
 var counter=0;
 app.get('/counter',function(req,res){
     counter=counter+1;
