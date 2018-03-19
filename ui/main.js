@@ -36,7 +36,7 @@ var button = document.getElementById('counter');
 };
 
 // Searchbox
-/*    var nameInput = document.getElementById('name-box');
+    var nameInput = document.getElementById('name-box');
     var name_set = nameInput.value;
     var btn_submitName = document.getElementById('submit-name');
     btn_submitName.onclick = function() {
@@ -47,7 +47,7 @@ var button = document.getElementById('counter');
         }
         var ui = document.getElementById('name-list');
         ui.innerHTML = list;
-    };  */
+    };  
 
 var button_submit = document.getElementById('submit-name');
     button_submit.onclick = function() {
