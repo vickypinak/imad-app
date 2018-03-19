@@ -37,8 +37,7 @@ var button = document.getElementById('counter');
 
 // Searchbox
 
-var inputname = document.getElementById('name-box');
-var enteredName = inputname.value;
+
 
 var submit_search = document.getElementById('submit-name');
 submit_search.onclick = function(){
@@ -62,6 +61,8 @@ submit_search.onclick = function(){
                 
             }
     };
+    var inputname = document.getElementById('name-box');
+    var enteredName = inputname.value;
     request.open('GET','http://pinakbagchi115.imad.hasura-app.io/submit-name?name='+ enteredName, true);
     request.send(null);
 };
