@@ -30,7 +30,7 @@ app.get('/db-test',function(req,res){
 });
 
 var names = [];
-app.get('/submit-name',function(req,res){           //takes submit-name?name=xxxx
+app.get('/submit-names',function(req,res){           //takes submit-name?name=xxxx
     
     var name = req.query.name;
     names.push(name);
