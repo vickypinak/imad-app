@@ -37,8 +37,7 @@ var button = document.getElementById('counter');
 
 // Searchbox
 
-var inputName = document.getElementById('name-box');
-var namee = inputName.value;
+
 var submit_search = document.getElementById('submit-name');
 submit_search.onClick = function(){
     var names = ['name1','name2','name3'];
