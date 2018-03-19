@@ -37,6 +37,8 @@ var button = document.getElementById('counter');
 
 // Searchbox
 
+var inputname = document.getElementById('name-box');
+var enteredName = inputname.value;
 
 var submit_search = document.getElementById('submit-name');
 submit_search.onclick = function(){
@@ -44,6 +46,7 @@ submit_search.onclick = function(){
     var list = '';
     for(var i=0;i<names.length;i++) {
         list+='<li>'+names[i]+'</li>';
+        console.log(JSON.stringfy(list));
     }
     var submit_list = document.getElementById('name-list');
     submit_list.innerHTML = list;
