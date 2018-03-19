@@ -42,10 +42,10 @@ var enteredName = inputname.value;
 
 var submit_search = document.getElementById('submit-name');
 submit_search.onclick = function(){
-    var request = new XMLHTTPRequest();
+    var request = new XMLHttpRequest();
     
     request.onreadystatechange = function() {
-        if(request.readyState === XMLRequest.DONE)
+        if(request.readyState === XMLHttpRequest.DONE)
         {
             if(request.status === 200)
             {
