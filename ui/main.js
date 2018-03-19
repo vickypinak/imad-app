@@ -70,9 +70,7 @@ var button_submit = document.getElementById('submit-name');
                         ui.innerHTML = list;
                     }
                 }
-            
         };
-        
         var namelist = document.getElementById('name-box');
         var name = namelist.value;
         request.open('GET','http://pinakbagchi115.imad.hasura-app.io/submit-name?name=' + name,true);
