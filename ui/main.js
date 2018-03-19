@@ -50,6 +50,8 @@ submit_search.onclick = function(){
             if(request.status === 200)
             {
                 var list = '';
+                var names = request.responseText;
+                names = JSON.parse(names);
                 for(var i=0;i<names.length;i++) {
                     list+='<li>'+names[i]+'</li>';
                     
@@ -59,9 +61,9 @@ submit_search.onclick = function(){
             }
                 
             }
-        }
     };
-    
+    request.open('GET','http//pinakbagchi115.imad.hasura-app.io/submit-name?name='+ enteredName, true);
+    request.send(null);
 };
 
 
