@@ -37,45 +37,7 @@ var button = document.getElementById('counter');
 
 // Searchbox
 
- /* var nameInput = document.getElementById('name-box');
-    var name_set = nameInput.value;
-    var btn_submitName = document.getElementById('submit-name');
-    btn_submitName.onclick = function() {
-        var names = ['name1','name2','name3','name4','name5'];
-        var list = '';
-        for(var i = 0;i<names.length;i++){
-        list+= '<li>' + names[i] + '</li>';
-        }
-        var ui = document.getElementById('name-list');
-        ui.innerHTML = list;
-    };  
-*/
-
-var button_submit = document.getElementById('submit-name');
-    button_submit.onclick = function() {
-        
-        var request = new XMLHttpRequest();
-        request.onsteadystatechange = function(){
-            
-            if(request.steadystate === XMLHttpRequest.DONE)
-                {
-                    if(request.status === 200) {
-                        var names = request.responseText;
-                        names = JSON.parse(names);
-                        var list= '';
-                        for(var i=0;i<names.length;i++){
-                        list+= '<li>' + names[i] + '</li>';
-                        }
-                        var ui = document.getElementById('name-list');
-                        ui.innerHTML = list;
-                    }
-                }
-        };
-        var namelist = document.getElementById('name-box');
-        var name = namelist.value;
-        request.open('GET','http://pinakbagchi115.imad.hasura-app.io/submit-name?name=' + name,true);
-        request.send(null);
-    };
+ 
 
 
 
